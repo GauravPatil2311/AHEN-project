@@ -1,0 +1,40 @@
+
+.locationss-centered-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
+.locationss-locations-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+
+  
+ 
+}
+.custom-search-box {
+  display: inline-block;
+}
+
+.custom-search-input {
+  padding: 8px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+}
+
+.custom-search-button {
+  padding: 8px; 
+  background-color: #070f07; 
+  color: #fff; 
+  border: none;
+  border-radius: 4px; 
+  cursor: pointer;
+}
+.location-card {
+  flex: 0 0 auto; /* Allow flexibility without shrinking */
+  margin-right: 16px; /* Adjust margin as needed */
+  transition: transform 0.3s ease-in-out;
+}

@@ -1,0 +1,42 @@
+#Heading {
+  text-align: center;
+}
+
+#carouselExample {
+  width: 80%;
+  margin: auto;
+}
+
+.carousel-inner {
+  transition: opacity 1s ease-in-out; 
+}
+
+.carousel-inner img {
+  max-height: 500px;
+  width: 100%;
+}
+.carousel-control-prev {
+  left: 20px;
+}
+
+.carousel-control-next {
+  right: 5px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 100%;
+  position: absolute;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+  color: #fff;
+}

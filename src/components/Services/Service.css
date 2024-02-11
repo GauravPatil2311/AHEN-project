@@ -1,0 +1,97 @@
+/* Service.css */
+
+/* Styles for the service card container */
+.service-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.8s ease-in-out;
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  background-image: linear-gradient(to right, #9d35fe 50%, #FFFFFF 50%);
+  position: relative;
+}
+
+.service-card:hover {
+  background-position: 0 0;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for the service card body */
+.service-card-body {
+  padding: 20px;
+}
+.service-hr {
+  border: 2px solid #000000;
+  margin: 20px 0;
+}
+.service-card:hover .service-hr {
+  border-color: #ffffff;
+}
+/* Styles for the service card title */
+.service-card-title {
+  color: #333;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  transition: color 0.8s ease-in-out;
+}
+
+.service-card:hover .service-card-title {
+  color: #fff;
+}
+
+/* Styles for the service card text */
+.service-card-text {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Styles for the "Go ahead with AHEN" text */
+.service-card-text::before {
+  content: "Go ahead with Ahen";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  white-space: nowrap; 
+  transition: opacity 1s ease-in-out;
+}
+
+.service-card:hover .service-card-text::before {
+  opacity: 1;
+}
+
+/* Styles for the service button */
+.service-btn  {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #030303;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.6s ease-in-out;
+}
+
+.service-btn:hover {
+  background-color: #bef800;
+}
+
+/* Change card text color to #8400ff on hover */
+.service-card:hover .service-card-text {
+  color: #9d35fe;
+}

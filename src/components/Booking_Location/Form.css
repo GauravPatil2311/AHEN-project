@@ -1,0 +1,156 @@
+
+.Book-form-container {
+  max-width: 400px;
+  margin: auto;
+  background: linear-gradient(45deg, #404040, #1a1a1a);
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  
+}
+
+.Book-form-card {
+  text-align: center;
+}
+
+.Book-form-h2 {
+  color: aqua;
+  margin-bottom: 20px;
+}
+
+.booking-form {
+  display: grid;
+  gap: 15px;
+}
+
+.Book-form-group {
+  position: relative;
+}
+
+.Book-form-control {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 2px solid #31c9ce;
+  border-radius: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: #fff;
+  box-shadow: none;
+  position: relative;
+}
+
+
+.Book-form-group select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 2px solid #0edfe6;
+  border-radius: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: #fff;
+  box-shadow: none;
+  position: relative;
+  appearance: none; /* Remove default styles in some browsers */
+}
+.Book-form-group select + label {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+.Book-form-group select::after {
+  content: '\25BC'; 
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #fff;
+}
+.Book-form-group select option {
+  background-color: #404040;
+  color: #fff;
+  width: 10%;
+}
+
+
+
+
+.Book-form-control + label {
+  position: absolute;
+  top: 25px;
+  left: 2px;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+
+.Book-form-control:focus + label,
+.Book-form-control:valid + label {
+  transform: translateY(-25px);
+  font-size: 12px;
+  opacity: 1;
+  color: aqua;
+  padding: 0 5px;
+}
+
+/* Style select dropdown */
+.Book-form-control.select {
+  appearance: none;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #0edfe6;
+  border-radius: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: #fff;
+  box-shadow: none;
+}
+.Book-form-control.select + label {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+/* Style submit button */
+.book-btn {
+  background-color: #0edfe6;
+  color: black;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.book-btn:hover {
+  background-color: #0caab0; /* Adjust the color for the hover effect */
+}
+input:focus {
+  outline: none;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 615px) {
+  /* Adjust container width for screens less than or equal to 615 pixels */
+  .Book-form-container {
+      max-width: 100%;
+      margin: 10px 10px 10px 10px;
+  }
+
+  
+}
