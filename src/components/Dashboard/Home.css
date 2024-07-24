@@ -1,0 +1,17 @@
+.home_container{
+    overflow-y: auto;
+    padding: 20px 20px;
+    color: rgba(0, 0, 0, 0.95);
+}
+.content_container {
+  display: flex;
+}
+
+.today_sessions {
+  flex: 60%;
+}
+
+.line_chart {
+  flex: 35%;
+}
+  

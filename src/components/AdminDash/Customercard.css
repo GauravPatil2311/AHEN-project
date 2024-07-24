@@ -1,0 +1,49 @@
+/* Customercard.css */
+
+.customercards-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .total-customers-card,
+  .todays-customers-card,
+  .pending-card,
+  .total-bill-card {
+    width: calc(100% - 20px);
+    margin-bottom: 20px;
+  }
+  
+  /* Styles for Total Customers card */
+  .total-customers-card {
+    background: linear-gradient(to right,  #23132c, #7992ec);
+    /* Add other styles as needed */
+  }
+  
+  /* Styles for Today's Customers card */
+  .todays-customers-card {
+    background: linear-gradient(to right, #3b1a50,#f179dd);
+    /* Add other styles as needed */
+  }
+  
+  /* Styles for Pending card */
+  .pending-card {
+    background: linear-gradient(to right, #ff5289 ,#1D2671);
+    /* Add other styles as needed */
+  }
+  
+  /* Styles for Total Bill card */
+  .total-bill-card {
+    background: linear-gradient(to right,  #ffa310,#49001b);
+    /* Add other styles as needed */
+  }
+  
+  @media (min-width: 768px) {
+    .total-customers-card,
+    .todays-customers-card,
+    .pending-card,
+    .total-bill-card {
+      width: calc(25% - 20px);
+    }
+  }
+  

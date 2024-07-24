@@ -1,0 +1,85 @@
+/* AdmincustomerStyles.css */
+
+/* Grid container */
+.admindash-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* Header */
+  .admin-header {
+    flex: 0 0 auto;
+    height: 60px; /* You can use !important if needed */
+  }
+  
+  /* Content container */
+  .admindash-content-container {
+    display: flex;
+    flex: 1;
+  }
+  
+  /* Sidebar */
+  .admindash-sidebar {
+    width: 0; /* Initial width of the sidebar */
+    overflow: hidden;
+    background-color: #000000;
+    color: azure;
+    transition: width 0.5s ease-in-out;
+    text-wrap: nowrap;
+  }
+  
+  .admindash-container-open .admindash-sidebar {
+    width: var(--admindash-sidebar-width); /* Adjust this value to match the sidebar width */
+  }
+  
+  /* Main content */
+  .admindash-main-content {
+    flex: 1;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .admindash-container-open .admindash-main-content {
+    transform: translateX(var(--admindash-sidebar-width)); /* Adjust this value to match the sidebar width */
+  }
+  
+  /* Additional styling for Customercard */
+  .customercards-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .total-customers-card,
+  .todays-customers-card,
+  .pending-card,
+  .total-bill-card {
+    width: calc(100% - 20px);
+    margin-bottom: 20px;
+  }
+  
+  .total-customers-card {
+    background: linear-gradient(to right,  #23132c, #7992ec);
+  }
+  
+  .todays-customers-card {
+    background: linear-gradient(to right, #3b1a50,#f179dd);
+  }
+  
+  .pending-card {
+    background: linear-gradient(to right, #ff5289 ,#1D2671);
+  }
+  
+  .total-bill-card {
+    background: linear-gradient(to right,  #ffa310,#49001b);
+  }
+  
+  @media (min-width: 768px) {
+    .total-customers-card,
+    .todays-customers-card,
+    .pending-card,
+    .total-bill-card {
+      width: calc(25% - 20px);
+    }
+  }
+  

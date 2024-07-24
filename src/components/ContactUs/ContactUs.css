@@ -1,0 +1,212 @@
+
+.contactContainer {
+  /* margin-top: 30%; */
+  width: 50%;
+  display: flex;
+  background: #000000;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px #555354;
+  margin: 8% auto;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
+
+/* .mcontainer{
+  background-color: #b1b2b6;
+  background: linear-gradient(to right, #e7e7e7, #413f40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.container{
+    background-color: #000000;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+.container p{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+.container span{
+    font-size: 12px;
+    left: -13px;
+}
+.container a{
+    color: #999;
+    font-size: 11px;
+    text-decoration: none;
+    margin: -8px -30px 10px 100px;
+} */
+
+
+
+
+.contact-left,
+.contact-right {
+  width: 100%;
+}
+.contact-left h1.Heading1 {
+  color: #f6f6f6;
+ font-weight: initial;
+ font-size: x-largeb;
+}
+.contactinfo ul {
+  margin-top: 30px;
+}
+.contactinfo ul li {
+  list-style-type: none;
+  line-height: 45px;
+}
+.inputBox {
+  position: relative;
+  margin-bottom: 10px;
+}
+.inputBox input,
+.inputBox textarea {
+  background-color: transparent;
+    border: none;
+    margin: 8px 0;
+    padding: 15px 25px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 90%;
+    outline: none;
+    border: none;            
+    border-bottom: 2px solid #615d5d;
+    outline: none;
+    resize: none;
+    color: white;
+}
+textarea.input {
+  padding: 0.8rem 1.2rem;
+  min-height: 150px;
+  border-radius: 22px;
+  resize: none;
+  overflow-y: auto;
+}
+.inputBox input:focus,
+.inputBox textarea:focus {
+  outline: none;
+    border: none;            
+    border-bottom: 2px solid #615d5d;
+    outline: none;
+    resize: none;
+    color: white;
+}
+.contactinfo span{
+  color: #f6f6f6;
+}
+.Info {
+   color: #999;
+}
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 38px 2px 25px; 
+  margin-left: 0px;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #999;
+  top: 0;
+}
+.inputBox input:focus~span,
+.inputBox input:valid~span,
+.inputBox textarea:focus~span,
+.inputBox textarea:valid~span {
+  color: #ffffff;
+  font-size: 12px;
+  transform: translateY(-30px);
+}
+.contactForm button {
+  align-items: flex-end;
+  padding: 12px 24px;
+  background-color: transparent !important;
+  color: #b00262;
+  border: none;
+  cursor: pointer;
+  float: right;
+  margin-right: 14px;
+}
+.contactForm button:hover {
+  background-color: #666;
+}
+.clear {
+  clear: both;
+}
+@media (max-width: 850px) {
+  .contactContainer {
+    flex-direction: column;
+  }
+  .contactForm button {
+    float: none;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .contactContainer {
+    padding: 1.5rem;
+  }
+  .inputBox input,
+  .inputBox textarea {
+    padding: 0.45rem 1.2rem;
+  }
+  .contactForm button {
+    padding: 0.45rem 1.2rem;
+  }
+}
+.Social-icons h4{
+  color: #f6f6f6;
+  font-weight: initial;
+  
+}
+
+.Social-icons{
+  margin-top: 60px; /* Add margin to the top */
+  justify-content: space-between;
+  margin-top: 20px;
+ 
+}
+
+.Social-icons a{
+  margin-left: 30px;
+  
+}
+.contactinfo{
+  border-radius: 20px;
+  border-left: none;
+  margin-left: 1px;
+  background-color: #000000;
+  height: 58%;
+  /* background: linear-gradient(to right, #212121, #121212); */
+  /* color: #000000; */
+  position: relative;
+  width: 80%;  
+  padding: 0 25px;
+
+}
+
+ .invalid-contact-number {
+   
+   color: #b00262; 
+} 
+
+
+/* .contactNo .invalid-contact-number span{
+  color: #b00262; 
+
+  margin-left: 20px;
+}  */
+

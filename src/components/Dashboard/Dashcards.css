@@ -1,0 +1,51 @@
+
+/* Dashcards.css */
+
+.dash-cards {
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.completed-card,
+.upcoming-card,
+.payments-card,
+.earnings-card {
+  width: calc(100% - 20px); /* Adjust the width based on your design */
+  margin-bottom: 20px;
+}
+
+/* Dashcards.css */
+
+.completed-card {
+  /* Styles for Completed Sessions card */
+  background: linear-gradient(to right, #273546, #0c70bd); /* Gradient from light green to dark green */
+  /* Add other styles as needed */
+}
+
+.upcoming-card {
+  /* Styles for Upcoming Sessions card */
+  background: linear-gradient(to right,#9b59b6, #2c3e50); /* Gradient from light red to dark red */
+  /* Add other styles as needed */
+}
+
+.payments-card {
+  /* Styles for Total Earnings card */
+  background: linear-gradient(to right,  #27ae60 , #0b4121 ); /* Gradient from light blue to dark blue */
+  /* Add other styles as needed */
+}
+
+.earnings-card {
+  /* Styles for Todays Earning card */
+  background: linear-gradient(to right, #e65a22 , #d6ae0d ); /* Gradient from light yellow to dark yellow */
+  /* Add other styles as needed */
+}
+@media (min-width: 768px) {
+  .completed-card,
+  .upcoming-card,
+  .payments-card,
+  .earnings-card {
+    width: calc(25% - 20px); /* Adjust the width for larger screens */
+  }
+}

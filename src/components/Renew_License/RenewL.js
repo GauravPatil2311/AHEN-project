@@ -1,22 +1,24 @@
 import React, { Component } from 'react';
 import './RenewL.css';
+import { firestore } from '../../firebase'; // Correct import path
+import { collection, addDoc } from 'firebase/firestore';
 
 class RenewL extends Component {
   constructor(props) {
     super(props);
     this.state = {
-    fullName: '',
-    contactNumber: '',
-    emailAddress: '',
-    aadharNumber: '',
-    currentLicenseId: '',
-    dateOfBirth: '',
-    licenseExpiryDate: '',
-    address: '',
-    pincode: '',
-    district: '',
-    state: '',
-    selectedVehicle: '',
+      fullName: '',
+      contactNumber: '',
+      emailAddress: '',
+      aadharNumber: '',
+      currentLicenseId: '',
+      dateOfBirth: '',
+      licenseExpiryDate: '',
+      address: '',
+      pincode: '',
+      district: '',
+      state: '',
+      selectedVehicle: '',
     };
   }
 
@@ -41,12 +43,29 @@ class RenewL extends Component {
     this.handleFloatingLabel(id, value);
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('License Renewal Form submitted:', this.state);
-    // Add logic for form submission or API call for license renewal
+    try {
+      const docRef = await addDoc(collection(firestore, 'license_renew_applications'), this.state);
+      console.log('Document written with ID: ', docRef.id);
+      this.setState({
+        fullName: '',
+        contactNumber: '',
+        emailAddress: '',
+        aadharNumber: '',
+        currentLicenseId: '',
+        dateOfBirth: '',
+        licenseExpiryDate: '',
+        address: '',
+        pincode: '',
+        district: '',
+        state: '',
+        selectedVehicle: '',
+      });
+    } catch (error) {
+      console.error('Error adding document: ', error);
+    }
   };
-
 
   render() {
     return (
@@ -120,7 +139,6 @@ class RenewL extends Component {
               />
               <label htmlFor="currentLicenseId">Current License ID</label>
             </div>
-           
             <div className="RenewL-form-group">
               <label htmlFor="licenseExpiryDate">License Expiry Date:</label>
               <input
@@ -135,7 +153,7 @@ class RenewL extends Component {
 
             <div className="RenewL-form-group">
               <label htmlFor="address" className={this.state.address ? 'floated' : ''}>
-               Address:
+                Address:
               </label>
               <textarea
                 id="address"
@@ -143,11 +161,9 @@ class RenewL extends Component {
                 required
                 value={this.state.address}
                 onChange={this.handleAddressChange}
-               
               ></textarea>
             </div>
 
-            
             <div className="RenewL-form-group">
               <input
                 type="text"
@@ -211,3 +227,4 @@ class RenewL extends Component {
 }
 
 export default RenewL;
+

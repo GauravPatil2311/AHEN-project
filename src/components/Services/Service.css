@@ -12,6 +12,7 @@
   background-position: 100% 0;
   background-image: linear-gradient(to right, #9d35fe 50%, #FFFFFF 50%);
   position: relative;
+  text-decoration: none;
 }
 
 .service-card:hover {
@@ -24,22 +25,27 @@
 .service-card-body {
   padding: 20px;
 }
+
 .service-hr {
   border: 2px solid #000000;
   margin: 20px 0;
 }
+
 .service-card:hover .service-hr {
   border-color: #ffffff;
 }
+
 /* Styles for the service card title */
 .service-card-title {
   color: #333;
   font-size: 1.25rem;
   margin-bottom: 10px;
   transition: color 0.8s ease-in-out;
+  text-decoration: none;
 }
 
 .service-card:hover .service-card-title {
+  font-weight: 700;
   color: #fff;
 }
 
@@ -49,6 +55,7 @@
   font-size: 1rem;
   line-height: 1.5;
   transition: color 0.3s ease-in-out;
+  text-decoration: none;
 }
 
 /* Styles for the "Go ahead with AHEN" text */
@@ -59,21 +66,31 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: bold;
   text-align: center;
   color: white;
   opacity: 0;
-  white-space: nowrap; 
-  transition: opacity 1s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden; /* Hide overflow text */
 }
 
 .service-card:hover .service-card-text::before {
+  
+  animation: typing 0.8s steps(40, end); /* Adjust duration and steps as needed */
   opacity: 1;
+  text-decoration: underline; /* Add underline on hover */
 }
-
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 /* Styles for the service button */
-.service-btn  {
+.service-btn {
   display: block;
   width: 100%;
   padding: 10px;
@@ -84,14 +101,21 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.6s ease-in-out;
+  transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out; /* Add color transition */
 }
 
-.service-btn:hover {
+.service-btn.custom-btn:hover {
   background-color: #bef800;
+  color: #000; /* Change text color on hover */
+  font-weight: 500;
+  text-decoration: none; /* Remove underline on hover */
 }
 
 /* Change card text color to #8400ff on hover */
 .service-card:hover .service-card-text {
   color: #9d35fe;
+}
+/* Add this rule to hide the button on hover */
+.service-card:hover .service-btn {
+  visibility: hidden;
 }

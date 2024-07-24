@@ -3,44 +3,53 @@ import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './Navbar.css';
 
-
 class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isMenuOpen: false,
+      isSignInPageOpen: false 
     };
   }
 
   toggleMenu = () => {
     this.setState((prevState) => ({
       isMenuOpen: !prevState.isMenuOpen,
+      isSignInPageOpen: false 
     }));
   };
+
+  toggleSignInPage = () => {
+    this.setState((prevState) => ({
+      isSignInPageOpen: !prevState.isSignInPageOpen
+    }));
+  };
+
   closeMenu = () => {
     this.setState({
-      isMenuOpen: false,
+      isMenuOpen: false
     });
   };
 
   render() {
-    const { isMenuOpen } = this.state;
+    const { isMenuOpen, isSignInPageOpen } = this.state;
 
     return (
       <div>
         <nav className="navbar">
           <div className="navbar__left">
             <span className="navbar__title">AHEN</span>
-            
           </div>
 
           <div className="navbar__right">
-          <span className="navbar__signIn">Sign In</span>
-          <div className="navbar__hamburgerCircle"></div>
-          <button className="navbar__hamburgerButton" onClick={this.toggleMenu}>
-            {isMenuOpen ? <FaTimes className="navbar__icon" /> : <FaBars className="navbar__icon" />}
-          </button>
-        </div>
+            <Link to="/signin" className="navbar__signIn" onClick={this.toggleSignInPage}>
+              Sign In
+            </Link>
+            <div className="navbar__hamburgerCircle"></div>
+            <button className="navbar__hamburgerButton" onClick={this.toggleMenu}>
+              {isMenuOpen ? <FaTimes className="navbar__icon" /> : <FaBars className="navbar__icon" />}
+            </button>
+          </div>
         </nav>
 
         {isMenuOpen && (
@@ -49,7 +58,7 @@ class Navbar extends Component {
               <FaTimes className="navbar__closeIcon" />
             </button>
             <div className="navbar__menuItems">
-            <Link to="/" className="navbar__menuItem" onClick={this.closeMenu}>
+              <Link to="/" className="navbar__menuItem" onClick={this.closeMenu}>
                 HOME
               </Link>
               <Link to="/services" className="navbar__menuItem" onClick={this.closeMenu}>
@@ -66,6 +75,9 @@ class Navbar extends Component {
               </Link>
             </div>
           </div>
+        )}
+   {isSignInPageOpen && (
+          <div className="navbar__signin-page" onClick={this.toggleSignInPage}></div>
         )}
       </div>
     );

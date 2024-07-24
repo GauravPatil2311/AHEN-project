@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+.create-account{
+  color: #f6f6f6;
+  font-weight: initial;
+}
+.Signin{
+  color: #f6f6f6;
+  font-weight: initial;
+}
+.main-container{
+  background-color: #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.signin-container{
+    background-color: #000000;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 900px;
+    max-width: 100%;
+    height: 550px;
+}
+.signin-container p{
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.px;
+    margin: 10px 10px;
+}
+.signin-container span{
+    font-size: 12px;
+    left: -19px;
+    padding: 13px 25px;
+}
+.signin-container a{
+    color: #999;
+    font-size: 11px;
+    text-decoration: none;
+    margin: -8px -50px 10px 125px;
+}
+.signInBtn{
+    position: relative;
+    width: 100%; 
+  margin-top: 1px;
+}
+.signInBtn button{
+    position: absolute;
+    right:-10px;
+}
+.signin-container button{
+    background-color: transparent;
+    color: #b00262;
+    font-size: 12px;
+    padding: 10px 30px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    cursor: pointer;  
+}
+.signin-container button.hidden{
+    background-color: transparent;
+    border-color: #888;
+    margin-top: 25px;     
+}
+.signin-container form{
+    background-color: #000000;
+    display: flex;
+    color: #999 ;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+.signin-container input{
+    background-color: transparent;
+    border: none;
+    margin: 15px 0;
+    padding: 0px 25px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+    border: none;            
+    border-bottom: 2px solid #615d5d;
+    outline: none;
+    resize: none;
+    color: white;   
+}
+.signin-container input:focus
+ {
+  border-bottom: 2px solid #fefefe;
+}
+.signin-container input:focus~span,
+.signin-container input:valid~span {
+  color: #e1d0d0;
+  font-size: 10px;
+  transform: translateY(-18px);
+}
+.form-container{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+.sign-in{
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+.signin-container.active .sign-in{
+    transform: translateX(100%);
+}
+.sign-up{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+.signin-container.active .sign-up{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+@keyframes move{
+    0%, 49.99%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+.social-icons{
+    margin: 20px 0;
+}
+.social-icons a{
+    border: 1px solid #999;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+.toggle-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+.signin-container.active .toggle-container{
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+.toggle{
+    background-color: #222222;
+    height: 100%;
+    background: linear-gradient(to right, #414040, #2a2829);
+    color: #fefcfc;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+.signin-container.active .toggle{
+    transform: translateX(50%);
+}
+.toggle-panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+.toggle-left{
+    left: -20px;
+    transform: translateX(-200%);
+}
+.signin-container.active .toggle-left{
+    transform: translateX(0);
+}
+.toggle-right{
+    right: -20px;
+    transform: translateX(0);
+}
+.signin-container.active .toggle-right{
+    transform: translateX(200%);
+}
+.toggle p {
+    color: #999;
+}
+.toggle h1 {
+    color: #f7f7f7;
+    font-weight: initial;   
+}

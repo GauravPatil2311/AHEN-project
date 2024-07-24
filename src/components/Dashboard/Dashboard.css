@@ -1,107 +1,38 @@
-/* The side navigation menu */
-.dashboard {
-    display: flex;
-  }
-  
-  .sidebar {
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
-    height: 100%;
-    overflow: auto;
-    transition: width 0.3s; /* Add smooth transition for opening/closing */
-  }
-  
-  /* Sidebar links */
-  .sidebar a {
-    display: block;
-    color: black;
-    padding: 16px;
-    text-decoration: none;
-  }
-  
-  /* Active/current link */
-  .sidebar a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
-  
-  /* Links on mouse-over */
-  .sidebar a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-  }
-  
-  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-  .content {
-    margin-left: 200px;
-    padding: 1px 16px;
-    height: 1000px;
-  }
-  
-  /* Toggle button */
-  .toggle-btn {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    padding: 10px;
-    background-color: #04AA6D;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Sidebar closed state */
-  .sidebar-closed {
-    width: 0;
-  }
-  
-  /* Dropdown styling */
-  .dropdown {
-    display: inline-block;
-    position: relative;
-  }
-  
-  .dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Updated dropdown arrow */
-  .dropbtn::after {
-    content: "➤";
-    float: right;
-    margin-left: 5px;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    width: 100%;
-    left: 0;
-  }
-  
-  /* Show dropdown content when the dropdown is open */
-  .dropdown-content.show {
-    display: block;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-  
+.grid-dash-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.dash_header {
+  flex: 0 0 auto;
+  height: 80px important;
+}
+
+.content-container {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 0; /* Initial width of the sidebar */
+  overflow: hidden;
+  background-color: #000000;
+  color: azure;
+  transition: width 0.5s ease-in-out;
+}
+
+.sidebar-open .sidebar {
+  width: var(--sidebar-width); /* Adjust this value to match the sidebar width */
+}
+
+.main-content {
+  flex: 1;
+  transition: transform 0.5s ease-in-out;
+}
+
+.sidebar-open .main-content {
+  transform: translateX(var(--sidebar-width)); /* Adjust this value to match the sidebar width */
+}
+
+/* ... rest of your styles ... */

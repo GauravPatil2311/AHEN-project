@@ -1,0 +1,34 @@
+/* Admin Header Styles */
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px ;
+    background-color: #333; /* Adjust the background color as needed */
+    color: #ffffff; /* Adjust the text color as needed */
+  }
+  
+  .admin-header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .admin-header-menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .admin-header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .admin-header-right-icon {
+    font-size: 2rem;
+    margin-left: 20px; /* Adjust the space between icons as needed */
+    cursor: pointer;
+  }
+  
+  /* End Admin Header Styles */
+  

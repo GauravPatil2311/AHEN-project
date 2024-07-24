@@ -1,0 +1,49 @@
+/* Admindriverscard.css */
+
+.admindrivers-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .total-drivers-card,
+  .active-drivers-card,
+  .available-drivers-card,
+  .payment-status-card {
+    width: calc(100% - 20px);
+    margin-bottom: 20px;
+  }
+  
+  /* Styles for Total Drivers card */
+  .total-drivers-card {
+    background: linear-gradient(to right,  #23132c, #7992ec);
+    /* Add other styles as needed */
+  }
+  
+  /* Styles for Active Drivers card */
+  .active-drivers-card {
+    background: linear-gradient(to right, #3b1a50,#f179dd);
+    /* Add other styles as needed */
+  }
+  
+  /* Styles for Available Drivers card */
+  .available-drivers-card {
+    background: linear-gradient(to right, #ff5289 ,#1D2671);
+    /* Add other styles as needed */
+  }
+  
+  /* Styles for Payment Status card */
+  .payment-status-card {
+    background: linear-gradient(to right,  #ffa310,#49001b);
+    /* Add other styles as needed */
+  }
+  
+  @media (min-width: 768px) {
+    .total-drivers-card,
+    .active-drivers-card,
+    .available-drivers-card,
+    .payment-status-card {
+      width: calc(25% - 20px);
+    }
+  }
+  

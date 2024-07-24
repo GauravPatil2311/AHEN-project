@@ -1,0 +1,62 @@
+/* Maincard.css */
+
+.main-card {
+  width: calc(25% - 20px);
+  margin: 10px;
+  padding: 8px;
+  background-color: white;
+  border: 1px solid #343434;
+  height: 110px;
+  border-radius: 5px;
+  color: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: perspective(1000px) rotateX(2deg); /* Add 3D effect */
+}
+
+.dash-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1px;
+}
+
+.dash-card-header h6 {
+  margin: 0;
+}
+
+/* Value */
+.main-card-value {
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+/* Progress Bar */
+.main-card_progress-bar {
+  height: 3px;
+  background-color: #939393;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+.main-card_progress {
+  height: 100%;
+  background-color: #ffffff;
+  width: 0; /* Initial width is 0 */
+  transition: width 0.5s ease !important; /* Add !important to ensure it takes precedence */
+}
+
+/* Progress Percentage Text */
+.main-card_progress-text {
+  font-size: 0.8rem;
+  color: #ffffff;
+  margin-bottom: -20px;
+}
+
+.card_icon {
+  /* Add styles for the icon */
+  font-size: 24px; /* Adjust the font size as needed */
+  margin-right: 8px; /* Add margin for spacing if needed */
+}

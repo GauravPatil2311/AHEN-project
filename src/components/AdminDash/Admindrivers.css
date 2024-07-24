@@ -1,0 +1,34 @@
+.driver_list-card {
+    width: calc(65% - 20px);
+    min-width: 400px;
+    margin: 10px;
+    box-sizing: border-box;
+    background-color:#ffffff;
+    padding: 15px;
+    border: 1px solid #3c3c3c;
+    border-radius: 5px;
+    max-height: 500px;  /* Set the maximum height as per your requirement */
+  overflow-y: auto; 
+  }
+  
+  .driver_list-card h5 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .drivers-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .drivers-table th, .drivers-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #b3b3b3; /* Add a line after each entry */
+  }
+  
+  .drivers-table th {
+    background-color: #b5b5b5;
+  }
+  

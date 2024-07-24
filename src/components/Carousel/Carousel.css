@@ -5,6 +5,7 @@
 #carouselExample {
   width: 80%;
   margin: auto;
+  height: 100%;
 }
 
 .carousel-inner {

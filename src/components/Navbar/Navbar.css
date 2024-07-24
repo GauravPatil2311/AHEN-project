@@ -1,50 +1,41 @@
-/* Navbar.css */
-
-/* Navbar styles */
-
-.navbar__hamburgerCircle {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(230, 220, 220, 0.5);
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: -1;
-}
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background: #060606;
+  background: #000000;
   color: #fff;
+  z-index: 1000; 
 }
-
 .navbar__left {
   display: flex;
   align-items: center;
 }
-
-/* Static title without link behavior */
 .navbar__title {
   color: #fff;
   font-size: 2rem;
   font-weight: bold;
-  margin-left: 10px ;
+  margin-top: 10px; 
+  margin-bottom: 10px; 
 }
-
 .navbar__right {
   display: flex;
-  align-items: center;
+  align-items:center;
+  margin-top: 10px; 
 }
-.navbar__signIn{
-  margin-right: 30px;
+.navbar__signIn {
+  margin-top: 10px; 
+  margin-right: 12px;
   font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  text-decoration: none;
 }
-/* Hamburger button styles */
+.navbar__signIn:hover {
+  text-decoration: none;
+  color: #fffafa;
+}
 .navbar__hamburgerButton {
   background: none;
   border: none;
@@ -52,38 +43,32 @@
   padding: 5px;
   display: flex;
   align-items: center;
-  transition: transform 0.05s ease; /* Adjust the transition duration */
-  
+  transition: transform 0.05s ease;
+  margin-top: 10px; 
 }
-
 .navbar__icon {
   font-size: 2rem;
   color: #fff;
   margin-right: 10px;
 }
-
-/* Fullscreen menu styles */
 .navbar__fullscreenMenu {
+  z-index: 2000;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 999;
-  opacity: 0; /* Initial opacity set to 0 for the fade-in effect */
-  transition: opacity 1s ease; /* Adjust the transition duration */
+  opacity: 0; 
+  transition: opacity 1s ease; 
 }
-
-/* Make the menu visible when isMenuOpen is true */
 .navbar__fullscreenMenu.active {
   opacity: 1;
 }
-
 .navbar__closeButton {
   background: none;
   border: none;
@@ -92,32 +77,25 @@
   top: 20px;
   right: 20px;
 }
-
 .navbar__closeIcon {
   font-size: 2rem;
   color: #fff;
 }
 .navbar__menuItems a {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.navbar__menuItems a {
+    flex-direction: column;
+    align-items: center;
   color: #fff;
   font-weight: bold;
   font-size: 2rem;
-  margin: 10px 0; /* Adjust the spacing between menu items */
+  margin: 10px 0; 
   cursor: pointer;
   position: relative;
-  text-decoration: none; /* Remove default text decoration */
-  transition: color 1s ease, text-decoration 2s ease; /* Adjust the transition properties */
+  text-decoration: none; 
+  transition: color 1s ease, text-decoration 2s ease; 
 }
-
-/* Add line through on hover */
 .navbar__menuItems a:hover {
   color: rgb(200, 200, 4);
   text-decoration: line-through;
-  text-decoration-color: black; /* Set line-through color */
+  text-decoration-color: black; 
 }
-

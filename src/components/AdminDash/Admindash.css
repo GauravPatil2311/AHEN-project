@@ -1,0 +1,44 @@
+/* AdmindashStyles.css */
+
+/* Grid container */
+.admindash-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header */
+.admin-header {
+  flex: 0 0 auto;
+  height: 60px; /* You can use !important if needed */
+}
+
+/* Content container */
+.admindash-content-container {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebar */
+.admindash-sidebar {
+  width: 0; /* Initial width of the sidebar */
+  overflow: hidden;
+  background-color: #000000;
+  color: azure;
+  transition: width 0.5s ease-in-out;
+  text-wrap: nowrap;
+}
+
+.admindash-container-open .admindash-sidebar {
+  width: var(--admindash-sidebar-width); /* Adjust this value to match the sidebar width */
+}
+
+/* Main content */
+.admindash-main-content {
+  flex: 1;
+  transition: transform 0.5s ease-in-out;
+}
+
+.admindash-container-open .admindash-main-content {
+  transform: translateX(var(--admindash-sidebar-width)); /* Adjust this value to match the sidebar width */
+}

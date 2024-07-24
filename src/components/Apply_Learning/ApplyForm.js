@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './ApplyForm.css';
-
+import { firestore } from '../../firebase'; // Correct import path
+import { collection, addDoc } from 'firebase/firestore';
 
 class ApplyForm extends Component {
   constructor(props) {
@@ -29,10 +30,26 @@ class ApplyForm extends Component {
     this.setState({ [id]: value });
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Apply Form submitted:', this.state);
-    // Add logic for form submission or API call for applying
+    try {
+      const docRef = await addDoc(collection(firestore, 'learning_license_applications'), this.state);
+      console.log('Document written with ID: ', docRef.id);
+      this.setState({
+        fullName: '',
+        contactNumber: '',
+        emailAddress: '',
+        aadharNumber: '',
+        dateOfBirth: '',
+        address: '',
+        pincode: '',
+        district: '',
+        state: '',
+        selectedVehicle: '',
+      });
+    } catch (error) {
+      console.error('Error adding document: ', error);
+    }
   };
 
   render() {
@@ -153,7 +170,6 @@ class ApplyForm extends Component {
                 <option>Two  Wheelers (80cc-500cc)</option>
                 <option>Four Wheelers  (800cc - 3000cc)</option>
                 <option>Heavy  Duty Vehicles (Above 5000cc)</option>
-                
               </select>
               <label htmlFor="selectedVehicle">Select Vehicle</label>
             </div>

@@ -1,0 +1,33 @@
+.wide-card {
+  /* width: calc(60% - 20px);
+  min-width: 90%; */
+  margin: 5px;
+  box-sizing: border-box;
+  background-color:#ffffff;
+  padding: 15px;
+  border: 1px solid #1c1c1c;
+  border-radius: 5px;
+  
+}
+
+.wide-card h5 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.session-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  
+}
+
+.session-table th, .session-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* Add a line after each entry */
+}
+
+.session-table th {
+  background-color: #b5b5b5;
+}

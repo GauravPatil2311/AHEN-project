@@ -6,13 +6,13 @@ class Footer extends Component {
     return (
       <div className="footer-dark">
         <footer>
-          <div className="container">
+          <div className="foot_container">
             <div className="row">
               <div className="col-sm-6 col-md-3 item">
                 <h3>Services</h3>
                 <ul>
                   <li><a href="#">Web design</a></li>
-                  <li><a href="#">Development</a></li>
+                  <li><a href="./sbar">Development</a></li>
                   <li><a href="#">Hosting</a></li>
                 </ul>
               </div>
@@ -20,7 +20,7 @@ class Footer extends Component {
                 <h3>About</h3>
                 <ul>
                   <li><a href="#">Company</a></li>
-                  <li><a href="#">Team</a></li>
+                  <li><a href="/admindash">Admin</a></li>
                   <li><Link to="/dashboard">Trainers</Link></li>
                   <li><a href="#">Careers</a></li>
                 </ul>

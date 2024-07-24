@@ -1,0 +1,113 @@
+/* Admin Sidebar Styles */
+
+#admin-sidebar {
+    position: relative;
+    height: 100vh;
+    background-color: #000000;
+    overflow-y: auto;
+    transition: width 1s ease-in-out; /* Change to the desired duration and timing function */
+    color: azure;
+    transform: translateX(0); /* Sidebar starts in open position */
+    border-bottom-right-radius: 5px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.522);
+  }
+  
+  .sidebar-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    font-size: 24px;
+    white-space: nowrap; 
+   
+ 
+  }
+  .side_list_icon {
+    font-size: 25px;
+    color: azure;
+  }
+  .sidebar-title > span {
+    display: none;
+  }
+  
+  .sidebar-brand {
+    margin-top: 25px;
+    margin-bottom: 0;
+  }
+  
+  .sidebar-list {
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .sidebar-list-item {
+    padding: 15px 10px 15px 10px;
+    font-size: 18px;
+    white-space: nowrap; 
+  }
+  
+  .sidebar-list-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+  }
+  
+  .sidebar-list-item > a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .sidebar_close_icon {
+    color: brown;
+    font-size: 2rem;
+    margin-right: 50px;
+  }
+  
+  .sidebar-responsive {
+    width: 200px;
+    display: inline !important;
+    z-index: 12 !important;
+  }
+  
+  .sidebar-closed {
+    width: 0;
+    transform: translateX(-100%);
+  }
+  
+  /* End Sidebar  */
+  
+  .icon_header {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+  }
+  
+  .driver_name {
+    font-size: 1.2rem;
+  }
+  
+  .submenu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .submenu-list-item a {
+    display: block;
+    padding: 8px 20px;
+    color: #ffffff; /* Adjust the text color as needed */
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Add a smooth transition on hover */
+  }
+  
+  .submenu-list-item a:hover {
+    background-color: #424242; /* Adjust the background color on hover */
+  }
+  
+  /* Submenu icon styles */
+  .submenu-icon {
+    margin-right: 10px; /* Adjust the space between icon and text */
+    color: #ffffff; /* Adjust the icon color as needed */
+    font-size: 18px; /* Adjust the icon size as needed */
+  }
+  .side-list-icon{
+    font-size: 5rem;
+  }
